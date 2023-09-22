@@ -54,7 +54,7 @@ void setup()
 void loop()
 {
   if (analogRead(A0) < 50) {
-    delay(3000); // Wait for 3000 millisecond(s)
+    delay(3000); 
     digitalWrite(8, LOW);
     digitalWrite(7, LOW);
     digitalWrite(6, HIGH);
@@ -68,9 +68,9 @@ void loop()
       digitalWrite(7, HIGH);
       digitalWrite(6, LOW);
       digitalWrite(5, HIGH);
-      delay(3000); // Wait for 3000 millisecond(s)
+      delay(3000);
       digitalWrite(5, LOW);
-      delay(1000); // Wait for 1000 millisecond(s)
+      delay(1000);
     }
   }
 }
