@@ -1,13 +1,38 @@
 # CP01-EDCS
 
-<div align="center">
-Alunos: <br>
-Isabela Barcellos Freire <br>
-Beatriz Dantas Sampaio <br>
-André Luiz Viana Ribeiro <br>
-Giovanna Franco Gaudino Rodrigues 
+<table>
+  <tr>
+    <td>
+      <div>
+        <table>
+          <tr>
+            <th>Alunos:</th>
+          </tr>
+          <tr>
+            <th>Giovanna Franco Gaudino Rodrigues</th>
+          </tr>
+          <tr>
+            <th>André Luiz Viana Ribeiro</th>
+          </tr>
+          <tr>
+            <th>Beatriz Dantas Sampaio</th>
+          </tr>
+          <tr>
+            <th>Isabela Barcellos Freire</th>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td>
+      <div>
+        Checkpoint 01 - Edge Computing & Computer Systems
+        <br>
+        Objetivo → Medir a luz do ambiente da Vinheria Agnello
+      </div>
+    </td>
+  </tr>
+</table>
 
-</div>
 
 <br>
 
