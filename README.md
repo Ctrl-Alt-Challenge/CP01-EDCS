@@ -36,7 +36,7 @@
 
 <br>
 
-<img height="200em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/380dc885-c458-4837-be2e-220c2b4f8a35" alt="Circuito" align="right">
+<img height="170em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/380dc885-c458-4837-be2e-220c2b4f8a35" alt="Circuito" align="right">
 
 <div align="left" width="600px">
   
