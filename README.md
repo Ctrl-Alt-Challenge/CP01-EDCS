@@ -1,4 +1,4 @@
-# CP01-EDCS
+# Uso do sensor LDR no Arduino
 
 <table>
   <tr>
@@ -25,13 +25,13 @@
     </td>
     <td>
       <div>
-        Checkpoint 01 - Edge Computing & Computer Systems
-        <br>
-        Objetivo → Medir a luz do ambiente da Vinheria Agnello
+        <b>Checkpoint 01 - Edge Computing & Computer Systems</b>
+      <td> <b>Objetivo → Medir a luz do ambiente da Vinheria Agnello</b> </td>
       </div>
     </td>
   </tr>
 </table>
+
 
 
 <br>
