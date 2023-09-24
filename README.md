@@ -1,4 +1,4 @@
-# Uso do sensor LDR no Arduino
+# Uso do sensor LDR, TMP36 e DHT11 no Arduino
 
 <table>
   <tr>
