@@ -11,7 +11,6 @@ int umid;
 int umidMap;
 int valorLDR;
 int buzzerPitch;
-int tempoAlerta = 0;
 int tempoBuzzer = 0;
 bool buzzerAtivo = false;
 
