@@ -32,12 +32,9 @@
   </tr>
 </table>
 
-
-
-
 <br>
 
-<img height="350em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/3361d683-9307-4e68-aca7-28a4a10be94f" alt="Circuito" align="right">
+<img height="300em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/3918e3e2-a125-4034-a3ce-09f38193a3a4" alt="Circuito" align="right">
 
 <div align="left" width="600px">
   
@@ -45,13 +42,19 @@
 int pinoLDR = A0;
 int tempSensor = A1;
 int umidSensor = A2;
-int pinoBuzzer = 11;
+int pinoBuzzer = 13;
 int pinoLedVerde = 10;
 int pinoLedAmarelo = 9;
 int pinoLedVermelho = 8;
 int temp;
 int tempMap;
+int umid;
 int umidMap;
+int valorLDR;
+int buzzerPitch;
+long tempoAlerta = 0;
+long tempoBuzzer = 0;
+bool buzzerAtivo = false;
 
 void setup() {
   pinMode(pinoLDR, INPUT);
@@ -59,59 +62,90 @@ void setup() {
   pinMode(pinoLedVerde, OUTPUT);
   pinMode(pinoLedAmarelo, OUTPUT);
   pinMode(pinoLedVermelho, OUTPUT);
- 
+
   Serial.begin(9600);
 }
 
 void loop() {
-  // LDR - Tá funcionando! (Eu acho)
-  int valorLDR = analogRead(pinoLDR);
+  valorLDR = analogRead(pinoLDR);
   char buffer[40];
-  sprintf(buffer, "LDR: %d", valorLDR);
+  sprintf(buffer, "LDR: %d ohm(s)", valorLDR);
   Serial.println(buffer);
 
-  // Temperatura 
-  // Leitura do sensor:
+  buzzerPitch = map(valorLDR, 1, 310, 100, 400);
+
   temp = analogRead(tempSensor);
-  
-  // Cálculo e ajuste da temperatura:
   tempMap = map(((temp - 20) * 3.04), 0, 1023, -40, 125);
-  
   char buffer2[40];
   sprintf(buffer2, "Temperatura: %d\xB0""C", tempMap);
   Serial.println(buffer2);
 
-  // Umidade 
-  int umid = analogRead(umidSensor);
+  buzzerPitch = map(tempMap, 1, 310, 100, 400);
+
+  umid = analogRead(umidSensor);
   umidMap = map(umid, 0, 1023, 0, 100);
   char buffer3[40];
-  sprintf(buffer3, "Umidade: %d", umidMap);
-  Serial.print(buffer3);
-  Serial.println("%");
+  sprintf(buffer3, "Umidade: %d%%", umidMap);
+  Serial.println(buffer3);
 
-  // Verificando as condições:
-  if (valorLDR >= 1 && valorLDR <= 103 && umidMap >= 60 && umidMap <= 80 && tempMap == 13) {
-    // CASO 1 - ÓTIMO
-    digitalWrite(pinoLedVerde, HIGH);
-    digitalWrite(pinoLedAmarelo, LOW);
-    digitalWrite(pinoLedVermelho, LOW);
-    noTone(pinoBuzzer);
-  } else if (abs(valorLDR - 52) <= 5 || abs(umidMap - 70) <= 5 || abs(tempMap - 13) <= 3) {
-    // CASO 2 - ALERTA
+  buzzerPitch = map(umidMap, 1, 310, 100, 400);
+
+  int grandezasForaConformes = 0;
+
+  if (valorLDR < 1 || valorLDR > 103) {
+    grandezasForaConformes++;
+  }
+
+  if (umidMap < 60 || umidMap > 80) {
+    grandezasForaConformes++;
+  }
+
+  if (tempMap < 10 || tempMap > 15) {
+    grandezasForaConformes++;
+  }
+
+  if (grandezasForaConformes == 1) {
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, HIGH);
     digitalWrite(pinoLedVermelho, LOW);
-    tone(pinoBuzzer, 100);
-  } else {
-    // CASO 3 - CRÍTICO
+    if (!buzzerAtivo) {
+      tone(pinoBuzzer, buzzerPitch);
+      buzzerAtivo = true;
+      tempoBuzzer = millis() + 3000;
+    }
+  } else if (grandezasForaConformes >= 2) {
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, HIGH);
-    tone(pinoBuzzer, 200);
+    if (!buzzerAtivo) {
+      tone(pinoBuzzer, buzzerPitch);
+      buzzerAtivo = true;
+      tempoBuzzer = 0;
+    }
+} else {
+    digitalWrite(pinoLedVerde, HIGH);
+    digitalWrite(pinoLedAmarelo, LOW);
+    digitalWrite(pinoLedVermelho, LOW);
+    if (buzzerAtivo) {
+      if (tempoBuzzer == 0) {
+        tempoBuzzer = millis() + 3000; // Reinicia o tempo de 3 segundos
+      } else if (millis() >= tempoBuzzer) {
+        noTone(pinoBuzzer); // Desliga o buzzer
+        buzzerAtivo = false;
+      }
+    }
+}
+
+
+  
+  if (tempoBuzzer > 0 && millis() >= tempoBuzzer) {
+    noTone(pinoBuzzer);
+    buzzerAtivo = false;
   }
 
-  delay(1000); 
+  delay(1000);
 }
+
 
 ```
   </div>
