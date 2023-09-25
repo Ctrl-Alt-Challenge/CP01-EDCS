@@ -1,4 +1,15 @@
-# Uso do sensor LDR, TMP36 e Potenciômetro no Arduino
+<p align="center">
+  
+![Header](https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/4a59c771-42fa-413f-a02a-5ebf136ba7d3)
+  
+</p>
+
+<div align="center">
+  <br>
+  <h1>Sensor de Monitoramento de Condições Ambientais</h1>
+</div>
+
+<br>
 
 <table>
   <tr>
@@ -26,7 +37,7 @@
     <td>
       <div>
         <b>Checkpoint 01 - Edge Computing & Computer Systems</b>
-      <td> <b>Objetivo → Medir a luz do ambiente da Vinheria Agnello</b> </td>
+      <td> <b>Objetivo → Medir a luz, temperatura e umidade do ambiente da Vinheria Agnello</b> </td>
       </div>
     </td>
   </tr>
