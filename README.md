@@ -129,9 +129,9 @@ void loop() {
     digitalWrite(pinoLedVermelho, LOW);
     if (buzzerAtivo) {
       if (tempoBuzzer == 0) {
-        tempoBuzzer = millis() + 3000; // Reinicia o tempo de 3 segundos
+        tempoBuzzer = millis() + 3000; 
       } else if (millis() >= tempoBuzzer) {
-        noTone(pinoBuzzer); // Desliga o buzzer
+        noTone(pinoBuzzer); 
         buzzerAtivo = false;
       }
     }
