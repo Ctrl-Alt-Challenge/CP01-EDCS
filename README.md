@@ -36,8 +36,8 @@
     </td>
     <td>
       <div>
-        <b>Checkpoint 01 - Edge Computing & Computer Systems</b>
-      <td> <b>Objetivo → Medir a luz, temperatura e umidade do ambiente da Vinheria Agnello</b> </td>
+        <b>Checkpoint 01 <br> Edge Computing & Computer Systems</b>
+      <td> <b>Objetivo → <br> Medir a luz, temperatura e umidade do ambiente da Vinheria Agnello</b> </td>
       </div>
     </td>
   </tr>
@@ -57,7 +57,7 @@
 | 1          | Amarelo LED                       |
 | 1          | Verde LED                         |
 | 1          | Fotorresistor                     |
-| 1          | Piezo                             |
+| 1          | Speaker                           |
 | 1          | 250 kΩ Potenciômetro              |
 
 </div>
@@ -71,4 +71,8 @@ Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consul
 <p> Para o desenvolvimento do projeto, foi usado a IDE: </p> 
 
 <a href="https://www.arduino.cc/en/software"> Arduino IDE </a>
+
+:warning: <b> Caso você use outras entradas para os componentes, favor lembrar de atualizar seu código com as entradas corretas. </b>
+
+
 
