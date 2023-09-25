@@ -43,11 +43,12 @@
   </tr>
 </table>
 
-<br>
 
 
-<img height="350em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
+<h2> Hardware </h2>
+<img height="400em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
 
+<div align="left">
 
 | Quantidade | Descrição                         |
 |------------|-----------------------------------|
@@ -61,3 +62,13 @@
 | 1          | Piezo                             |
 | 1          | 250 kΩ Potenciômetro              |
 
+</div>
+
+
+<h2> Software </h2>
+
+<p> Para o desenvolvimento do projeto, foi usado a IDE: </p> 
+
+<div>
+<a href="https://www.arduino.cc/en/software"> Arduino IDE </a>
+ 
