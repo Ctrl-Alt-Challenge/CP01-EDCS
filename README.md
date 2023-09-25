@@ -35,7 +35,18 @@
 <br>
 
 
-<img height="290em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
+<img height="350em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
 
-<div align="left" width="600px">
-  
+
+| Quantidade | Descrição                         |
+|------------|-----------------------------------|
+| 1          | Arduino Uno R3                    |
+| 1          | Vermelho LED                      |
+| 1          | Sensor de temperatura [TMP36]     |
+| 4          | 220 Ω Resistor                    |
+| 1          | Amarelo LED                       |
+| 1          | Verde LED                         |
+| 1          | Fotorresistor                     |
+| 1          | Piezo                             |
+| 1          | 250 kΩ Potenciômetro              |
+
