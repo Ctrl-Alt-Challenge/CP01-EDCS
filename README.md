@@ -1,8 +1,7 @@
 <p align="center">
   
 ![Header](https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/4a59c771-42fa-413f-a02a-5ebf136ba7d3)
-
----  
+## 
 </p>
 
 <div align="center">
