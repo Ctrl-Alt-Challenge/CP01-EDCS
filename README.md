@@ -64,11 +64,16 @@
 
 </div>
 
+<h2> Configuração </h2>
 
-<h2> Software </h2>
+Conecte os componentes de forma adequada e mostrada na <a href="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/blob/main/README.md#-hardware-">imagem</a>.
+
+<h2> Software e Funcionamento </h2>
 
 <p> Para o desenvolvimento do projeto, foi usado a IDE: </p> 
 
 <div>
 <a href="https://www.arduino.cc/en/software"> Arduino IDE </a>
+
+
  
