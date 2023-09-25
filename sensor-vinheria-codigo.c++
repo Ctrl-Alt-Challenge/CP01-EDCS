@@ -28,7 +28,7 @@ void setup() {
 void loop() {
   valorLDR = analogRead(pinoLDR);
   char buffer[40];
-  sprintf(buffer, "LDR: %d ohm(s)", valorLDR);
+  sprintf(buffer, "Resis. do LDR: %d ohm(s)", valorLDR);
   Serial.println(buffer);
 
   buzzerPitch = map(valorLDR, 1, 310, 100, 400);
@@ -44,43 +44,47 @@ void loop() {
   umid = analogRead(umidSensor);
   umidMap = map(umid, 0, 1023, 0, 100);
   char buffer3[40];
-  sprintf(buffer3, "Umidade: %d%%", umidMap);
+  sprintf(buffer3, "Umidade do ar: %d%%", umidMap);
   Serial.println(buffer3);
 
   buzzerPitch = map(umidMap, 1, 310, 100, 400);
 
-  int grandezasForaConformes = 0;
+  int condicoesInadequadas = 0;
 
   if (valorLDR < 1 || valorLDR > 103) {
-    grandezasForaConformes++;
+    condicoesInadequadas++;
   }
 
   if (umidMap < 60 || umidMap > 80) {
-    grandezasForaConformes++;
+    condicoesInadequadas++;
   }
 
   if (tempMap < 10 || tempMap > 15) {
-    grandezasForaConformes++;
+    condicoesInadequadas++;
   }
 
-  if (grandezasForaConformes == 1) {
+  if (condicoesInadequadas == 1) {
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, HIGH);
     digitalWrite(pinoLedVermelho, LOW);
+    
     if (!buzzerAtivo) {
       tone(pinoBuzzer, buzzerPitch);
       buzzerAtivo = true;
       tempoBuzzer = millis() + 3000;
     }
-  } else if (grandezasForaConformes >= 2) {
+    
+  } else if (condicoesInadequadas >= 2) {
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, HIGH);
+    
     if (!buzzerAtivo) {
       tone(pinoBuzzer, buzzerPitch);
       buzzerAtivo = true;
       tempoBuzzer = 0;
     }
+    
 } else {
     digitalWrite(pinoLedVerde, HIGH);
     digitalWrite(pinoLedAmarelo, LOW);
@@ -94,8 +98,6 @@ void loop() {
       }
     }
 }
-
-
   
   if (tempoBuzzer > 0 && millis() >= tempoBuzzer) {
     noTone(pinoBuzzer);
