@@ -11,8 +11,8 @@ int umid;
 int umidMap;
 int valorLDR;
 int buzzerPitch;
-long tempoAlerta = 0;
-long tempoBuzzer = 0;
+int tempoAlerta = 0;
+int tempoBuzzer = 0;
 bool buzzerAtivo = false;
 
 void setup() {
@@ -64,46 +64,47 @@ void loop() {
   }
 
   if (condicoesInadequadas == 1) {
-    digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, HIGH);
     digitalWrite(pinoLedVermelho, LOW);
     
     if (!buzzerAtivo) {
       tone(pinoBuzzer, buzzerPitch);
       buzzerAtivo = true;
-      tempoBuzzer = millis() + 3000;
+      tempoBuzzer = millis();
+    }
+    
+    
+    digitalWrite(pinoLedVerde, LOW);
+    
+    if (millis() - tempoBuzzer >= 3000) {
+      noTone(pinoBuzzer); 
+      buzzerAtivo = false;
     }
     
   } else if (condicoesInadequadas >= 2) {
-    digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, HIGH);
     
     if (!buzzerAtivo) {
       tone(pinoBuzzer, buzzerPitch);
       buzzerAtivo = true;
-      tempoBuzzer = 0;
     }
     
-} else {
-    digitalWrite(pinoLedVerde, HIGH);
+    
+    digitalWrite(pinoLedVerde, LOW);
+    
+  } else {
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, LOW);
-    if (buzzerAtivo) {
-      if (tempoBuzzer == 0) {
-        tempoBuzzer = millis() + 3000; 
-      } else if (millis() >= tempoBuzzer) {
-        noTone(pinoBuzzer); 
-        buzzerAtivo = false;
-      }
+    
+    
+    digitalWrite(pinoLedVerde, HIGH);
+    
+    if (buzzerAtivo && millis() - tempoBuzzer >= 3000) {
+      noTone(pinoBuzzer); 
+      buzzerAtivo = false;
     }
-}
-  
-  if (tempoBuzzer > 0 && millis() >= tempoBuzzer) {
-    noTone(pinoBuzzer);
-    buzzerAtivo = false;
   }
-
+  
   delay(1000);
 }
-
