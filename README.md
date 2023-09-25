@@ -59,7 +59,7 @@
 
 <h2> Configuração </h2>
 
-Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte a <a href="https://user-images.githubusercontent.com/110347145/270241111-7e29fb77-afb5-4c96-ae84-576aa0cb1025.png">imagem</a>.
+Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte a <a href="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/blob/main/circuito-vinheria.png">imagem</a>.
 
 <h2> Software </h2>
 
