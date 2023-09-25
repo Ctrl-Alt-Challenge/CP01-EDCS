@@ -46,7 +46,7 @@
 
 
 <h2> Hardware </h2>
-<img height="400em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
+<img height="380em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
 
 <div align="left">
 
