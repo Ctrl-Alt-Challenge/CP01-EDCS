@@ -34,7 +34,7 @@
 
 <br>
 
-<img height="300em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/3918e3e2-a125-4034-a3ce-09f38193a3a4" alt="Circuito" align="right">
+<img height="250em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/3918e3e2-a125-4034-a3ce-09f38193a3a4" alt="Circuito" align="right">
 
 <div align="left" width="600px">
   
