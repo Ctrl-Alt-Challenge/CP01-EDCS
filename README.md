@@ -1,4 +1,4 @@
-# Uso do sensor LDR, TMP36 e DHT11 no Arduino
+# Uso do sensor LDR, TMP36 e Potenciômetro no Arduino
 
 <table>
   <tr>
