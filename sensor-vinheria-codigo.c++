@@ -73,7 +73,6 @@ void loop() {
       tempoBuzzer = millis();
     }
     
-    
     digitalWrite(pinoLedVerde, LOW);
     
     if (millis() - tempoBuzzer >= 3000) {
@@ -90,13 +89,11 @@ void loop() {
       buzzerAtivo = true;
     }
     
-    
     digitalWrite(pinoLedVerde, LOW);
     
   } else {
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, LOW);
-    
     
     digitalWrite(pinoLedVerde, HIGH);
     
