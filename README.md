@@ -1,8 +1,3 @@
-<p align="center">
-  
-![Header](https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/4a59c771-42fa-413f-a02a-5ebf136ba7d3)
-## 
-</p>
 
 <div align="center">
   <br>
@@ -44,7 +39,7 @@
 </table>
 
 <h2> Hardware </h2>
-<img height="370em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7f341af6-93d9-418b-94c4-7403772e867c" alt="Circuito" align="right">
+<img height="370em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7e29fb77-afb5-4c96-ae84-576aa0cb1025" alt="Circuito" align="right">
 
 <div align="left">
 
