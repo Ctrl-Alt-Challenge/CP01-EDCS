@@ -1,7 +1,6 @@
-
 <div align="center">
   <br>
-  <h1>Sensor de Monitoramento de Condições Ambientais</h1>
+  <h1>Sensor de Monitoramento de Condições Ambientais & Sensor LDR</h1>
 </div>
 
 <br>
@@ -43,29 +42,50 @@
 
 <div align="left">
 
-| Quantidade | Descrição                         |
-|------------|-----------------------------------|
-| 1          | Arduino Uno R3                    |
-| 1          | Vermelho LED                      |
-| 1          | Sensor de temperatura [TMP36]     |
-| 4          | 220 Ω Resistor                    |
-| 1          | Amarelo LED                       |
-| 1          | Verde LED                         |
-| 1          | Fotorresistor                     |
-| 1          | Speaker                           |
-| 1          | 250 kΩ Potenciômetro              |
+- Tabela com o hardware do circuito completo
+
+| Quantidade | Descrição                   |
+| ---------- | ----------------------------- |
+| 1          | Arduino Uno R3                |
+| 1          | Vermelho LED                  |
+| 1          | Sensor de temperatura [TMP36] |
+| 4          | 220 Ω Resistor                |
+| 1          | Amarelo LED                   |
+| 1          | Verde LED                     |
+| 1          | Fotorresistor                 |
+| 1          | Speaker                       |
+| 1          | 250 kΩ Potenciômetro          |
+
+</div>
+
+<img height="370em" src="../CP01-EDCS/Circuito-LDR/circuito-ldr.png" alt="Circuito" align="right">
+
+<div align="left">
+
+- Tabela com o hardware do circuito só com o LDR
+
+| Quantidade | Descrição                     |
+| ---------- | ----------------------------- |
+| 1          | Arduino Uno R3                |
+| 1          | Vermelho LED                  |
+| 4          | 220 Ω Resistor                |
+| 1          | Amarelo LED                   |
+| 1          | Verde LED                     |
+| 1          | Fotorresistor                 |
+| 1          | Speaker                       |
+
 
 </div>
 
 <h2> Configuração </h2>
 
-Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte a <a href="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/blob/main/circuito-vinheria.png">imagem</a>.
+Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte a `<a href="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/blob/main/circuito-vinheria.png">`imagem`</a>`.
 
 <h2> Software </h2>
 
-<p> Para o desenvolvimento do projeto, foi usado a IDE: </p> 
+<p> Para o desenvolvimento do projeto, foi usado a IDE: </p>
 
-<a href="https://www.arduino.cc/en/software"> Arduino IDE </a>
+`<a href="https://www.arduino.cc/en/software">` Arduino IDE `</a>`
 
 <h2> Funcionamento  </h2>
 1. Conecte os sensores e LEDs conforme o esquema. <br>
@@ -75,7 +95,4 @@ Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consul
 
 <br>
 
-:warning: <b> Caso você use outras entradas para os componentes, favor lembrar de atualizar seu código com as entradas corretas. </b>
-
-
-
+⚠️ `<b>` Caso você use outras entradas para os componentes, favor lembrar de atualizar seu código com as entradas corretas. `</b>`
