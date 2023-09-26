@@ -3,6 +3,7 @@ int pinoBuzzer = 11;
 int pinoLedVerde = 10;
 int pinoLedAmarelo = 9;
 int pinoLedVermelho = 8;
+bool buzzerAtivo = false; 
 
 void setup() {
   pinMode(pinoBuzzer, OUTPUT);
@@ -19,23 +20,36 @@ void loop() {
   
   int BuzzerPitch = map(valorLDR, 1, 310, 100, 400);
 
-
   if (valorLDR >= 1 && valorLDR <= 103) {  
     digitalWrite(pinoLedVerde, HIGH);
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, LOW);
-    noTone(pinoBuzzer); 
+    
+    if (buzzerAtivo) {
+      noTone(pinoBuzzer); 
+      buzzerAtivo = false;
+    }
   } else if (valorLDR >= 104 && valorLDR <= 220) { 
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, HIGH);
     digitalWrite(pinoLedVermelho, LOW);
-    tone(pinoBuzzer, BuzzerPitch, 100);
+    
+    if (!buzzerAtivo) {
+      tone(pinoBuzzer, BuzzerPitch, 3000); 
+      buzzerAtivo = true;
+    }
+    
     delay(500);
   } else if (valorLDR >= 221) { 
     digitalWrite(pinoLedVerde, LOW);
     digitalWrite(pinoLedAmarelo, LOW);
     digitalWrite(pinoLedVermelho, HIGH);
-    tone(pinoBuzzer, BuzzerPitch, 200); 
+    
+    if (!buzzerAtivo) {
+      tone(pinoBuzzer, BuzzerPitch, 200); 
+      buzzerAtivo = true;
+    }
+    
     delay(100);
   }
 }
