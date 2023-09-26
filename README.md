@@ -42,7 +42,7 @@
 
 <div align="left">
 
-- Tabela com o hardware do circuito completo
+<b> - Tabela com o hardware do circuito completo </b>
 
 | Quantidade | Descrição                   |
 | ---------- | ----------------------------- |
@@ -65,7 +65,7 @@
 
 <div align="left">
 
-- Tabela com o hardware do circuito só com o LDR
+<b> - Tabela com o hardware do circuito só com o LDR </b>
 
 | Quantidade | Descrição                     |
 | ---------- | ----------------------------- |
