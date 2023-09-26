@@ -38,7 +38,7 @@
 </table>
 
 <h2> Hardware </h2>
-<img height="370em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7e29fb77-afb5-4c96-ae84-576aa0cb1025" alt="Circuito" align="right">
+<img height="390em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/7e29fb77-afb5-4c96-ae84-576aa0cb1025" alt="Circuito" align="right">
 
 <div align="left">
 
