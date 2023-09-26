@@ -58,7 +58,10 @@
 
 </div>
 
-<img height="370em" src="../CP01-EDCS/Circuito-LDR/circuito-ldr.png" alt="Circuito" align="right">
+---
+
+<img height="385em" src="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/assets/110347145/e4274581-4f64-477f-996e-24cc1f8d228c" alt="Circuito" align="right">
+
 
 <div align="left">
 
@@ -79,13 +82,16 @@
 
 <h2> Configuração </h2>
 
-Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte a `<a href="https://github.com/Ctrl-Alt-Challenge/CP01-EDCS/blob/main/circuito-vinheria.png">`imagem`</a>`.
+Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte as imagens abaixo:
+- <a href="Circuito-LDR/circuito-ldr.png"> Circuito completo </a>
+- <a href="Circuito-Completo/circuito-completo.png"> Circuito só com o LDR </a>
+
 
 <h2> Software </h2>
 
 <p> Para o desenvolvimento do projeto, foi usado a IDE: </p>
 
-`<a href="https://www.arduino.cc/en/software">` Arduino IDE `</a>`
+<a href="https://www.arduino.cc/en/software"> Arduino IDE </a>
 
 <h2> Funcionamento  </h2>
 1. Conecte os sensores e LEDs conforme o esquema. <br>
@@ -95,4 +101,4 @@ Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consul
 
 <br>
 
-⚠️ `<b>` Caso você use outras entradas para os componentes, favor lembrar de atualizar seu código com as entradas corretas. `</b>`
+⚠️ <b> Caso você use outras entradas para os componentes, favor lembrar de atualizar seu código com as entradas corretas. </b>
