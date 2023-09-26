@@ -5,7 +5,7 @@ const int pinoLedAmarelo = 9;
 const int pinoLedVermelho = 8;
 int buzzerPitch;
 bool buzzerAtivo = false;
-unsigned long tempoBuzzer = 0;
+int tempoBuzzer = 0;
 
 void setup() {
   pinMode(pinoBuzzer, OUTPUT);
