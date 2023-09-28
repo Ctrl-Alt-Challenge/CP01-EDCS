@@ -83,8 +83,8 @@
 <h2> Configuração </h2>
 
 Conecte os componentes elétricos de forma adequada, caso tenha dúvidas, consulte as imagens abaixo:
-- <a href="Circuito-LDR/circuito-ldr.png"> Circuito completo </a>
-- <a href="Circuito-Completo/circuito-completo.png"> Circuito só com o LDR </a>
+- <a href="Circuito-Completo/circuito-completo.png"> Circuito completo </a>
+- <a href="Circuito-LDR/circuito-ldr.png"> Circuito só com o LDR </a>
 
 
 <h2> Software </h2>
